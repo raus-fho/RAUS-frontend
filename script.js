@@ -26,7 +26,7 @@ function createLine(hist){
 
 function main(){
     let data = getData("http://140.238.182.164:32492/history");
-    hists = JSON.parse(JSON.stringify(data));
+    hists = JSON.parse(data);
     let table = document.getElementById("tabelaHist");
 
     hists.forEach(element => {
