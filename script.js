@@ -12,6 +12,15 @@ function createLine(hist){
     tdData = document.createElement("td");
     tdHumidade = document.createElement("td");
     tdStatus = document.createElement("td");
+    
+    if (hist.actuator_status == 'True')
+    {
+        hist.actuator_status = 'Aberto'
+    }
+    else
+    {
+        hist.actuator_status = 'Fechado'
+    }
 
     tdData.innerHTML = hist.registered_at
     tdHumidade.innerHTML = hist.humidity
